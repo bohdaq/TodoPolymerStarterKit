@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+
+<dom-module id="todo-data">
+
+    <script>
+        Polymer({
+            is: 'todo-data',
+
+            properties: {
+                todos: {
+                    notify: true, //2way data binding
+                    value: function () {
+                        return [
+                            {
+                                name: 'buy milk',
+                                done: true,
+                                archive: false
+                            },
+                            {
+                                name: 'learn-polymer',
+                                done: true,
+                                archive: false
+                            },
+                            {
+                                name: 'clean house',
+                                done: false,
+                                archive: false
+                            }
+                        ]
+                    }
+                }
+            }
+        })
+    </script>
+</dom-module>
